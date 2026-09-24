@@ -198,7 +198,8 @@ export default function Home() {
   const [sealed, setSealed] = useState(false);
 
   const config = intent ? intents[intent] : null;
-  const activeScenes = intent ? worlds[intent].scenes : worlds.dating.scenes;\n  const scene = activeScenes[step];
+  const activeScenes = intent ? worlds[intent].scenes : worlds.dating.scenes;
+  const scene = activeScenes[step];
 
   const pathTitle = useMemo(() => {
     if (!config) return "";
@@ -284,7 +285,8 @@ export default function Home() {
       )}
 
       {phase === "world" && config && (
-        <section className={`world world-${intent}`}>\n          <div className="world-stamp">{worlds[intent].station}</div>
+        <section className={`world world-${intent}`}>
+          <div className="world-stamp">{worlds[intent].station}</div>
           <div className="world-meta">
             <div><span>{name.trim() || "Traveler"}</span><small>{pathTitle}</small></div>
             <div className="stepper">{String(step + 1).padStart(2, "0")} / {String(activeScenes.length).padStart(2, "0")}</div>
