@@ -5,7 +5,8 @@ import { useMemo, useState } from "react";
 type Intent = "dating" | "friends" | "creative" | "music";
 type Artifact = { symbol: string; name: string };
 type Choice = { text: string; artifact: Artifact; keys?: number };
-type Scene = { place: string; title: string; copy: string; object: string; choices: Choice[] };\ntype World = { station: string; scenes: Scene[] };
+type Scene = { place: string; title: string; copy: string; object: string; choices: Choice[] };
+type World = { station: string; scenes: Scene[] };
 
 const intents: Record<Intent, { label: string; world: string; mark: string; intro: string; match: string; trace: string }> = {
   dating: {
