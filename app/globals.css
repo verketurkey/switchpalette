@@ -109,3 +109,12 @@ h2 { font-size: clamp(40px, 6vw, 72px); line-height: .98; letter-spacing: -.035e
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+.world-stamp { margin-bottom: 18px; color: var(--gold); font: 700 10px Arial,sans-serif; letter-spacing: .22em; text-transform: uppercase; opacity: .8; }
+.world-dating .scene-card { background: radial-gradient(circle at 78% 20%,rgba(172,104,58,.16),transparent 28%),linear-gradient(150deg,#161c25,#0c1118 68%); box-shadow: inset 0 -90px 120px rgba(3,8,14,.45); }
+.world-friends .scene-card { background: radial-gradient(circle at 78% 18%,rgba(211,129,64,.20),transparent 25%),linear-gradient(150deg,#342116,#17130f 68%); }
+.world-creative .scene-card { background: linear-gradient(150deg,#d7d1c3,#9d978b); color:#171510; border-color:rgba(20,18,14,.25); }
+.world-creative .scene-card p,.world-creative .inspect-note { color:#514d45; }
+.world-creative .scene-card .object { color:#6b2d24; border-color:rgba(20,18,14,.3); }
+.world-music .scene-card { background: radial-gradient(circle at 75% 30%,rgba(191,101,43,.18),transparent 24%),linear-gradient(150deg,#21150f,#0d0c0b 70%); }
+.world-dating .scene-card::after,.world-friends .scene-card::after,.world-music .scene-card::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.15; background:repeating-linear-gradient(90deg,transparent 0 58px,rgba(238,231,216,.08) 59px 60px); }
