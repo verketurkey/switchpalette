@@ -214,3 +214,39 @@ body, button, input { font-family:"Fraunces", Georgia, serif; }
 .intent-card:nth-child(2) strong { font-family:"Abril Fatface",serif; font-weight:400; }
 .intent-card:nth-child(3) strong { font-family:"Barrio",cursive; font-weight:400; font-size:1.2em; }
 .intent-card:nth-child(4) strong { font-family:"Fraunces",serif; font-weight:900; font-style:italic; }
+
+/* Elsewhere title-card treatment */
+.presenter {
+  font-family:"DM Mono",monospace;
+  font-size:clamp(.7rem,1.2vw,.9rem);
+  font-weight:500;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin:0 0 .65rem .35rem;
+  transform:rotate(-1deg);
+}
+.brand { display:flex; align-items:baseline; gap:.65rem; }
+.brand small {
+  font-family:"DM Mono",monospace;
+  font-size:.55rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.brand span { font-family:"Shrikhand","Abril Fatface",serif; }
+.home h1 {
+  font-family:"Shrikhand","Abril Fatface",serif;
+  font-size:clamp(5.5rem,15vw,12rem);
+  line-height:.72;
+  letter-spacing:-.045em;
+  margin:.08em 0 .16em;
+  transform:rotate(-2.25deg) skewX(-3deg);
+  text-shadow:
+    4px 4px 0 #f4a52f,
+    8px 8px 0 #e83e72,
+    12px 12px 0 #2b160e;
+  max-width:none;
+}
+@media (max-width:700px){
+  .home h1 { font-size:clamp(4.25rem,22vw,7rem); text-shadow:3px 3px 0 #f4a52f,6px 6px 0 #e83e72,9px 9px 0 #2b160e; }
+  .brand small { display:none; }
+}
