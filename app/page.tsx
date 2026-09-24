@@ -286,7 +286,7 @@ export default function Home() {
 
       {phase === "world" && config && (
         <section className={`world world-${intent}`}>
-          <div className="world-stamp">{worlds[intent].station}</div>
+          <div className="world-stamp">{config ? worlds[intent as Intent].station : ""}</div>
           <div className="world-meta">
             <div><span>{name.trim() || "Traveler"}</span><small>{pathTitle}</small></div>
             <div className="stepper">{String(step + 1).padStart(2, "0")} / {String(activeScenes.length).padStart(2, "0")}</div>
