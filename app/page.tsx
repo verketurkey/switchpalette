@@ -268,14 +268,14 @@ export default function Home() {
           <div className="more-paths" aria-label="More ways to meet people">
             <div className="more-paths-title">MORE PLACES TO GO</div>
             <div className="more-path-grid">
-              <button type="button"><b>Local Adventures</b><small>Find people who actually want to go somewhere.</small><span>COMING SOON</span></button>
-              <button type="button"><b>DIY + Makers</b><small>Build, fix, invent, and probably make a mess.</small><span>COMING SOON</span></button>
-              <button type="button"><b>Parents</b><small>Meet other parents without making small talk at pickup.</small><span>COMING SOON</span></button>
-              <button type="button"><b>Odd Interests</b><small>For the niche thing you assumed nobody else cared about.</small><span>COMING SOON</span></button>
-              <button type="button"><b>Books + Film</b><small>Find people who want to overanalyze stories with you.</small><span>COMING SOON</span></button>
-              <button type="button"><b>Food + Cooking</b><small>Cook, eat, trade recipes, and judge a truly unnecessary amount of cheese.</small><span>COMING SOON</span></button>
-              <button type="button"><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>COMING SOON</span></button>
-              <button type="button"><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>J</i><i>S</i><i>L</i><em>+3</em></div><b>Local Adventures</b><small>Find people who actually want to go somewhere.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>R</i><i>A</i><i>T</i><em>+4</em></div><b>DIY + Makers</b><small>Build, fix, invent, and probably make a mess.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>M</i><i>C</i><i>K</i><em>+5</em></div><b>Parents</b><small>Meet other parents without making small talk at pickup.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>J</i><i>S</i><i>L</i><em>+6</em></div><b>Odd Interests</b><small>For the niche thing you assumed nobody else cared about.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>R</i><i>A</i><i>T</i><em>+7</em></div><b>Books + Film</b><small>Find people who want to overanalyze stories with you.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>M</i><i>C</i><i>K</i><em>+8</em></div><b>Food + Cooking</b><small>Cook, eat, trade recipes, and judge a truly unnecessary amount of cheese.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>J</i><i>S</i><i>L</i><em>+9</em></div><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>COMING SOON</span></button>
+              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>R</i><i>A</i><i>T</i><em>+10</em></div><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>COMING SOON</span></button>
             </div>
           </div>
           <label className="photo-namebox">
