@@ -265,19 +265,23 @@ export default function Home() {
               </button>
             ))}
           </div>
-          <div className="more-paths" aria-label="More ways to meet people">
-            <div className="more-paths-title">MORE PLACES TO GO</div>
-            <div className="more-path-grid">
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>J</i><i>S</i><i>L</i><em>+3</em></div><b>Local Adventures</b><small>Find people who actually want to go somewhere.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>R</i><i>A</i><i>T</i><em>+4</em></div><b>DIY + Makers</b><small>Build, fix, invent, and probably make a mess.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>M</i><i>C</i><i>K</i><em>+5</em></div><b>Parents</b><small>Meet other parents without making small talk at pickup.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>J</i><i>S</i><i>L</i><em>+6</em></div><b>Odd Interests</b><small>For the niche thing you assumed nobody else cared about.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>R</i><i>A</i><i>T</i><em>+7</em></div><b>Books + Film</b><small>Find people who want to overanalyze stories with you.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>M</i><i>C</i><i>K</i><em>+8</em></div><b>Food + Cooking</b><small>Cook, eat, trade recipes, and judge a truly unnecessary amount of cheese.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>J</i><i>S</i><i>L</i><em>+9</em></div><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>COMING SOON</span></button>
-              <button type="button" className="category-card"><div className="profile-float" aria-hidden="true"><i>R</i><i>A</i><i>T</i><em>+10</em></div><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>COMING SOON</span></button>
+          <section className="house-map" aria-label="Explore the rest of the Elsewhere house">
+            <div className="house-title"><small>THE REST OF THE HOUSE</small><h2>Every category has a room.</h2><p>Go upstairs, climb into the attic, or head down to the basement. Naturally, the basement has opinions.</p></div>
+            <div className="floor floor-attic"><div className="floor-label">ATTIC</div>
+              <button className="house-room attic-studio"><div className="profile-float"><i>J</i><i>S</i><i>L</i><em>+6</em></div><b>Odd Interests</b><small>Curiosities, rabbit holes, and the niche thing nobody else gets.</small><span>ATTIC STUDIO</span></button>
+              <button className="house-room attic-library"><div className="profile-float"><i>R</i><i>A</i><i>T</i><em>+7</em></div><b>Books + Film</b><small>Stories, arguments, recommendations, and unnecessary analysis.</small><span>READING NOOK</span></button>
             </div>
-          </div>
+            <div className="floor floor-second"><div className="floor-label">SECOND FLOOR</div>
+              <button className="house-room bedroom"><div className="profile-float"><i>M</i><i>C</i><i>K</i><em>+5</em></div><b>Parents</b><small>Meet other parents without performing small talk at pickup.</small><span>UPSTAIRS LOUNGE</span></button>
+              <button className="house-room hobby-room"><div className="profile-float"><i>A</i><i>N</i><i>V</i><em>+4</em></div><b>Local Adventures</b><small>Find people who actually want to leave the group chat and go somewhere.</small><span>MAP ROOM</span></button>
+            </div>
+            <div className="floor floor-basement"><div className="floor-label">BASEMENT</div>
+              <button className="house-room rec-room"><div className="profile-float"><i>J</i><i>S</i><i>L</i><em>+9</em></div><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>REC ROOM</span></button>
+              <button className="house-room workshop"><div className="profile-float"><i>R</i><i>A</i><i>T</i><em>+10</em></div><b>DIY + Makers</b><small>Build, fix, invent, and make an entirely defensible mess.</small><span>WORKSHOP</span></button>
+              <button className="house-room kitchen-cellar"><div className="profile-float"><i>M</i><i>C</i><i>K</i><em>+8</em></div><b>Food + Cooking</b><small>Cook, trade recipes, and judge unreasonable quantities of cheese.</small><span>BASEMENT KITCHEN</span></button>
+              <button className="house-room garden-door"><div className="profile-float"><i>E</i><i>R</i><i>D</i><em>+6</em></div><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>GARDEN DOOR</span></button>
+            </div>
+          </section>
           <label className="photo-namebox">
             <span>WHAT SHOULD WE CALL YOU?</span>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your first name" maxLength={30} />
