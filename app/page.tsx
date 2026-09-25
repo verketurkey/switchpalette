@@ -265,6 +265,15 @@ export default function Home() {
               </button>
             ))}
           </div>
+          <div className="more-paths" aria-label="More ways to meet people">
+            <div className="more-paths-title">MORE PLACES TO GO</div>
+            <div className="more-path-grid">
+              <button type="button"><b>Local Adventures</b><small>Find people who actually want to go somewhere.</small><span>COMING SOON</span></button>
+              <button type="button"><b>DIY + Makers</b><small>Build, fix, invent, and probably make a mess.</small><span>COMING SOON</span></button>
+              <button type="button"><b>Parents</b><small>Meet other parents without making small talk at pickup.</small><span>COMING SOON</span></button>
+              <button type="button"><b>Odd Interests</b><small>For the niche thing you assumed nobody else cared about.</small><span>COMING SOON</span></button>
+            </div>
+          </div>
           <label className="photo-namebox">
             <span>WHAT SHOULD WE CALL YOU?</span>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your first name" maxLength={30} />
