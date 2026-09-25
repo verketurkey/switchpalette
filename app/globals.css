@@ -311,3 +311,14 @@ body, button, input { font-family:"Fraunces", Georgia, serif; }
 .photo-namebox input{width:150px;padding:6px 8px;border:1px solid #7c4a2c;background:#fff3d5;color:#3c2419;font-family:"Fraunces",serif}
 .photo-access-note{position:absolute;z-index:4;right:1.2%;bottom:1%;font-family:"DM Mono",monospace;font-size:.55rem;color:#fff0c4;background:rgba(62,31,17,.75);padding:5px 8px}
 @media(max-width:760px){.photo-home{overflow-x:auto}.elsewhere-room-art{width:1000px;max-width:none}.portal-hotspots{width:1000px}.photo-namebox{position:sticky;left:12px;bottom:12px;transform:none;width:max-content;margin-top:-50px}.photo-access-note{display:none}}
+
+.more-paths{position:relative;z-index:6;background:#ead5a4;padding:30px 4% 38px;border-top:7px solid #5a321e;color:#4a281c}
+.more-paths-title{text-align:center;font-family:"DM Mono",monospace;font-weight:700;letter-spacing:.18em;font-size:.75rem;margin-bottom:18px}
+.more-path-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.more-path-grid button{min-height:155px;padding:20px 16px;background:#c9844e;border:3px solid #5a321e;box-shadow:5px 5px 0 #5a321e;color:#42261a;text-align:left;display:flex;flex-direction:column;cursor:default}
+.more-path-grid button:nth-child(2){background:#8b9a61}.more-path-grid button:nth-child(3){background:#d5a44c}.more-path-grid button:nth-child(4){background:#8d6b76}
+.more-path-grid b{font-family:"Abril Fatface","Fraunces",serif;font-size:1.55rem;font-weight:400}
+.more-path-grid small{font-family:"Fraunces",serif;font-size:.88rem;margin-top:7px;line-height:1.3}
+.more-path-grid span{margin-top:auto;padding-top:16px;font-family:"DM Mono",monospace;font-size:.6rem;font-weight:700;letter-spacing:.1em}
+@media(max-width:800px){.more-path-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.more-path-grid{grid-template-columns:1fr}}
