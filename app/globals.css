@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barrio&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=Shrikhand&display=swap');
+
 :root {
   --ink: #eee7d8;
   --muted: #aaa28f;
@@ -169,7 +171,7 @@ linear-gradient(125deg,#f49b2f 0 27%,#ef562d 27% 48%,#e83f72 48% 67%,#4e8a68 67%
 @media(max-width:700px){ .home,.world,.cabinet,.person-section,.quest,.door-section { margin-left:12px; margin-right:12px; box-shadow:8px 8px 0 #2b160e; } .home{transform:none;} }
 
 /* Whimsical 70s editorial typography */
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barrio&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=Shrikhand&display=swap');
+
 
 body, button, input { font-family:"Fraunces", Georgia, serif; }
 .brand, .home h1, .cabinet h2, .person-section h2, .quest h2, .door-section h2 {
