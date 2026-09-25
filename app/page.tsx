@@ -272,6 +272,10 @@ export default function Home() {
               <button type="button"><b>DIY + Makers</b><small>Build, fix, invent, and probably make a mess.</small><span>COMING SOON</span></button>
               <button type="button"><b>Parents</b><small>Meet other parents without making small talk at pickup.</small><span>COMING SOON</span></button>
               <button type="button"><b>Odd Interests</b><small>For the niche thing you assumed nobody else cared about.</small><span>COMING SOON</span></button>
+              <button type="button"><b>Books + Film</b><small>Find people who want to overanalyze stories with you.</small><span>COMING SOON</span></button>
+              <button type="button"><b>Food + Cooking</b><small>Cook, eat, trade recipes, and judge a truly unnecessary amount of cheese.</small><span>COMING SOON</span></button>
+              <button type="button"><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>COMING SOON</span></button>
+              <button type="button"><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>COMING SOON</span></button>
             </div>
           </div>
           <label className="photo-namebox">
