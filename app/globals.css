@@ -250,3 +250,48 @@ body, button, input { font-family:"Fraunces", Georgia, serif; }
   .home h1 { font-size:clamp(4.25rem,22vw,7rem); text-shadow:3px 3px 0 #f4a52f,6px 6px 0 #e83e72,9px 9px 0 #2b160e; }
   .brand small { display:none; }
 }
+
+/* Cozy 1970s house landing page */
+.home{
+  position:relative; overflow:hidden; max-width:1240px; padding:46px 54px 56px;
+  background:
+    linear-gradient(rgba(72,38,21,.08),rgba(72,38,21,.08)),
+    repeating-linear-gradient(90deg,transparent 0 92px,rgba(72,38,21,.08) 93px 95px),
+    linear-gradient(#b87845 0 67%,#80512f 67% 69%,#b06c36 69% 100%);
+  border:8px solid #5a321e; box-shadow:0 18px 45px rgba(40,19,9,.45),inset 0 0 80px rgba(67,29,12,.18);
+  transform:none; border-radius:5px;
+}
+.home:before{content:"";position:absolute;inset:auto 0 0;height:31%;background:
+ repeating-linear-gradient(0deg,rgba(73,38,19,.18) 0 2px,transparent 2px 38px),
+ repeating-linear-gradient(90deg,rgba(73,38,19,.12) 0 2px,transparent 2px 120px);
+ pointer-events:none}
+.room-kicker{position:relative;text-align:center;font-family:"DM Mono",monospace;letter-spacing:.26em;font-weight:700;color:#fff0c4;font-size:.8rem;text-shadow:1px 2px #4b2919}
+.home h1{position:relative;text-align:center;color:#f7e5b5;text-shadow:5px 6px 0 #6e321f;font-size:clamp(5.8rem,13vw,11rem);margin:.02em 0 .1em;transform:none;line-height:.76}
+.room-tagline{position:relative;width:max-content;max-width:92%;margin:0 auto 12px;padding:9px 22px;background:#f4dfb0;color:#4a281c;border:2px solid #6d3b22;border-radius:50%;font-family:"Fraunces",serif;font-weight:800;font-style:italic;font-size:clamp(1rem,2vw,1.35rem);transform:rotate(-1deg)}
+.room-intro{position:relative;max-width:670px!important;text-align:center;margin:0 auto 24px!important;color:#3f2418!important;background:rgba(246,224,179,.78);padding:10px 16px;border-radius:4px}
+.namebox{position:relative;max-width:440px;margin:0 auto 22px;background:#e7c98d;border:2px solid #59321f;padding:10px 12px;box-shadow:4px 4px 0 #59321f}
+.namebox input{background:#f5e6c4!important;color:#3c2419!important;border-color:#6c4329!important}
+.choose-label{position:relative;text-align:center;color:#f6e6bd!important;text-shadow:2px 2px #57301e;margin-bottom:12px}
+.room-portals{position:relative;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}
+.portal{min-height:430px!important;padding:0 10px 15px!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;align-items:center!important;border:4px solid #5a321e!important;border-radius:90px 90px 8px 8px!important;background:#d4aa6b!important;box-shadow:inset 0 0 0 7px rgba(255,238,196,.35),6px 7px 0 #57311f!important;transform:none!important}
+.portal:hover{transform:translateY(-5px)!important;box-shadow:inset 0 0 0 7px rgba(255,238,196,.4),8px 12px 0 #57311f!important}
+.portal-room{position:relative;display:block;width:100%;height:245px;margin-bottom:0;border-radius:72px 72px 3px 3px;border:3px solid #5b3422;overflow:hidden;background:#b46f42;box-shadow:inset 0 0 30px rgba(47,24,14,.4)}
+.portal-room:before,.portal-room:after{content:"";position:absolute}
+.portal-room:before{left:10%;right:10%;bottom:0;height:45%;background:linear-gradient(150deg,#8d5737 0 48%,#6e402b 49% 52%,#b47b4b 53%);clip-path:polygon(0 35%,100% 0,100% 100%,0 100%)}
+.portal-room:after{width:38%;height:32%;left:31%;top:20%;background:#d6a45c;border:5px solid #6b3c26;box-shadow:0 55px 0 -15px #68422d}
+.portal-room i{position:absolute;z-index:2;display:block}
+.portal-room i:nth-child(1){width:54px;height:80px;left:14%;bottom:18%;background:#8a5b34;border-radius:5px 5px 15px 15px;box-shadow:12px 8px 0 #5f3a28}
+.portal-room i:nth-child(2){width:42px;height:76px;right:12%;bottom:14%;background:#486443;border-radius:50% 50% 10px 10px;clip-path:polygon(50% 0,63% 28%,90% 9%,73% 42%,100% 47%,68% 57%,77% 100%,22% 100%,32% 57%,0 47%,28% 42%,10% 9%,38% 28%)}
+.portal-room i:nth-child(3){width:42px;height:58px;right:25%;bottom:13%;background:#e5b15c;border-radius:50% 50% 8px 8px;box-shadow:0 -15px 25px #f2c36d}
+.portal-dating .portal-room{background:linear-gradient(#a95843,#d58a62)}
+.portal-friends .portal-room{background:linear-gradient(#708159,#c09254)}
+.portal-creative .portal-room{background:linear-gradient(#769487,#d6ad70)}
+.portal-music .portal-room{background:linear-gradient(#465663,#98694e)}
+.portal .intent-copy{display:flex!important;flex-direction:column;align-items:center;text-align:center;padding:8px 3px 4px}
+.portal .intent-copy b{font-family:"Abril Fatface","Fraunces",serif!important;font-size:1.75rem;line-height:1;color:#48271b}
+.portal .intent-copy small{font-family:"Fraunces",serif!important;text-transform:none!important;letter-spacing:0!important;font-size:.83rem;color:#513322;margin-top:7px}
+.portal-enter{margin-top:auto;display:block;background:#efe0b8;border:2px solid #57311f;border-radius:999px;padding:7px 18px;font-family:"DM Mono",monospace;font-size:.76rem;font-weight:700;letter-spacing:.08em;color:#4b291c}
+.portal-dating .portal-enter{background:#c96b4d}.portal-friends .portal-enter{background:#89924e}.portal-creative .portal-enter{background:#c99535}.portal-music .portal-enter{background:#58727a;color:#fff3d0}
+.home .footer-note{position:relative;color:#f4dfb3!important;text-shadow:1px 1px #4d291b;margin-top:28px}
+@media(max-width:900px){.room-portals{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.home{padding:34px 18px}.room-portals{grid-template-columns:1fr}.portal{min-height:390px!important}.portal-room{height:225px}.room-tagline{width:auto;border-radius:20px}.home h1{font-size:clamp(4rem,22vw,6.5rem)}}
