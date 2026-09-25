@@ -255,29 +255,21 @@ export default function Home() {
       </header>
 
       {phase === "home" && (
-        <section className="home">
-          <div className="room-kicker">SWITCH PALETTE PRESENTS</div>
-          <h1>ELSEWHERE</h1>
-          <div className="room-tagline">Meet people by going somewhere strange.</div>
-          <p className="lead room-intro">Step through a room. Make choices. Leave traces behind. The paths you take determine whose paths cross yours.</p>
-          <label className="namebox">
+        <section className="home photo-home">
+          <img className="elsewhere-room-art" src="/de35fb2f-605e-4993-89b2-8e4a72a97174%20(1).png" alt="A warm 1970s living room with four arched rooms labeled Dating, Friends, Creative, and Music." />
+          <div className="portal-hotspots" aria-label="Choose a room">
+            {(Object.keys(intents) as Intent[]).map((kind) => (
+              <button key={kind} className={`photo-hotspot hotspot-${kind}`} onClick={() => start(kind)}>
+                <span>{kind === "dating" ? "Dating" : kind === "friends" ? "Friends" : kind === "creative" ? "Creative" : "Music"}</span>
+                <small>ENTER →</small>
+              </button>
+            ))}
+          </div>
+          <label className="photo-namebox">
             <span>WHAT SHOULD WE CALL YOU?</span>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your first name" maxLength={30} />
           </label>
-          <div className="choose-label">CHOOSE A ROOM</div>
-          <div className="intent-grid room-portals">
-            {(Object.keys(intents) as Intent[]).map((kind) => {
-              const item = intents[kind];
-              return (
-                <button className={`intent-card portal portal-${kind}`} key={kind} onClick={() => start(kind)}>
-                  <span className="portal-room" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span className="intent-copy"><b>{kind === "dating" ? "Dating" : kind === "friends" ? "Friends" : kind === "creative" ? "Creative" : "Music"}</b><small>{kind === "dating" ? "Romance, curiosity, and the people in between." : kind === "friends" ? "Kindred weirdos for real life." : kind === "creative" ? "Collaborators, muses, and fellow makers." : "Concert buddies, bandmates, and late-night listeners."}</small></span>
-                  <span className="portal-enter">ENTER →</span>
-                </button>
-              );
-            })}
-          </div>
-          <div className="footer-note">No swiping. No public score. No “hot singles in your area” catastrophe.</div>
+          <div className="photo-access-note">Choose a doorway above to begin.</div>
         </section>
       )}
 
