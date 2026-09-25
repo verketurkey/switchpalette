@@ -195,7 +195,7 @@ export default function Home() {
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
   const [hiddenFound, setHiddenFound] = useState<number[]>([]);
   const [phase, setPhase] = useState<"home" | "world" | "cabinet" | "door" | "person" | "quest">("home");
-  const [sealed, setSealed] = useState(false);
+  const [sealed, setSealed] = useState(false);\n  const [houseRoom, setHouseRoom] = useState<string | null>(null);
 
   const config = intent ? intents[intent] : null;
   const activeScenes = intent ? worlds[intent].scenes : worlds.dating.scenes;
@@ -268,21 +268,21 @@ export default function Home() {
           <section className="house-map" aria-label="Explore the rest of the Elsewhere house">
             <div className="house-title"><small>THE REST OF THE HOUSE</small><h2>Every category has a room.</h2><p>Go upstairs, climb into the attic, or head down to the basement. Naturally, the basement has opinions.</p></div>
             <div className="floor floor-attic"><div className="floor-label">ATTIC</div>
-              <button className="house-room attic-studio"><div className="profile-float"><i>J</i><i>S</i><i>L</i><em>+6</em></div><b>Odd Interests</b><small>Curiosities, rabbit holes, and the niche thing nobody else gets.</small><span>ATTIC STUDIO</span></button>
-              <button className="house-room attic-library"><div className="profile-float"><i>R</i><i>A</i><i>T</i><em>+7</em></div><b>Books + Film</b><small>Stories, arguments, recommendations, and unnecessary analysis.</small><span>READING NOOK</span></button>
+              <button onClick={() => setHouseRoom("Odd Interests")} className="house-room attic-studio"><div className="profile-float"><i>J</i><i>S</i><i>L</i><em>+6</em></div><b>Odd Interests</b><small>Curiosities, rabbit holes, and the niche thing nobody else gets.</small><span>ATTIC STUDIO</span></button>
+              <button onClick={() => setHouseRoom("Books + Film")} className="house-room attic-library"><div className="profile-float"><i>R</i><i>A</i><i>T</i><em>+7</em></div><b>Books + Film</b><small>Stories, arguments, recommendations, and unnecessary analysis.</small><span>READING NOOK</span></button>
             </div>
             <div className="floor floor-second"><div className="floor-label">SECOND FLOOR</div>
-              <button className="house-room bedroom"><div className="profile-float"><i>M</i><i>C</i><i>K</i><em>+5</em></div><b>Parents</b><small>Meet other parents without performing small talk at pickup.</small><span>UPSTAIRS LOUNGE</span></button>
-              <button className="house-room hobby-room"><div className="profile-float"><i>A</i><i>N</i><i>V</i><em>+4</em></div><b>Local Adventures</b><small>Find people who actually want to leave the group chat and go somewhere.</small><span>MAP ROOM</span></button>
+              <button onClick={() => setHouseRoom("Parents")} className="house-room bedroom"><div className="profile-float"><i>M</i><i>C</i><i>K</i><em>+5</em></div><b>Parents</b><small>Meet other parents without performing small talk at pickup.</small><span>UPSTAIRS LOUNGE</span></button>
+              <button onClick={() => setHouseRoom("Local Adventures")} className="house-room hobby-room"><div className="profile-float"><i>A</i><i>N</i><i>V</i><em>+4</em></div><b>Local Adventures</b><small>Find people who actually want to leave the group chat and go somewhere.</small><span>MAP ROOM</span></button>
             </div>
             <div className="floor floor-basement"><div className="floor-label">BASEMENT</div>
-              <button className="house-room rec-room"><div className="profile-float"><i>J</i><i>S</i><i>L</i><em>+9</em></div><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>REC ROOM</span></button>
-              <button className="house-room workshop"><div className="profile-float"><i>R</i><i>A</i><i>T</i><em>+10</em></div><b>DIY + Makers</b><small>Build, fix, invent, and make an entirely defensible mess.</small><span>WORKSHOP</span></button>
-              <button className="house-room kitchen-cellar"><div className="profile-float"><i>M</i><i>C</i><i>K</i><em>+8</em></div><b>Food + Cooking</b><small>Cook, trade recipes, and judge unreasonable quantities of cheese.</small><span>BASEMENT KITCHEN</span></button>
-              <button className="house-room garden-door"><div className="profile-float"><i>E</i><i>R</i><i>D</i><em>+6</em></div><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>GARDEN DOOR</span></button>
+              <button onClick={() => setHouseRoom("Games")} className="house-room rec-room"><div className="profile-float"><i>J</i><i>S</i><i>L</i><em>+9</em></div><b>Games</b><small>Board games, video games, trivia, and friendly rivalries.</small><span>REC ROOM</span></button>
+              <button onClick={() => setHouseRoom("DIY + Makers")} className="house-room workshop"><div className="profile-float"><i>R</i><i>A</i><i>T</i><em>+10</em></div><b>DIY + Makers</b><small>Build, fix, invent, and make an entirely defensible mess.</small><span>WORKSHOP</span></button>
+              <button onClick={() => setHouseRoom("Food + Cooking")} className="house-room kitchen-cellar"><div className="profile-float"><i>M</i><i>C</i><i>K</i><em>+8</em></div><b>Food + Cooking</b><small>Cook, trade recipes, and judge unreasonable quantities of cheese.</small><span>BASEMENT KITCHEN</span></button>
+              <button onClick={() => setHouseRoom("Outdoors")} className="house-room garden-door"><div className="profile-float"><i>E</i><i>R</i><i>D</i><em>+6</em></div><b>Outdoors</b><small>Hikes, gardens, campfires, lakes, and fresh air with witnesses.</small><span>GARDEN DOOR</span></button>
             </div>
           </section>
-          <label className="photo-namebox">
+          {houseRoom && <div className="room-overlay" role="dialog" aria-modal="true" onClick={() => setHouseRoom(null)}><article className="room-detail" onClick={(e) => e.stopPropagation()}><button className="room-close" onClick={() => setHouseRoom(null)}>×</button><small>YOU ENTERED</small><h2>{houseRoom}</h2><p>This room is part of the Elsewhere house. Profiles, prompts, objects and little discoveries will live here instead of on a generic category page.</p><div className="room-people"><i>A</i><i>J</i><i>M</i><i>R</i><span>people exploring this room</span></div><button className="primary" onClick={() => setHouseRoom(null)}>KEEP EXPLORING</button></article></div>}\n          <label className="photo-namebox">
             <span>WHAT SHOULD WE CALL YOU?</span>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your first name" maxLength={30} />
           </label>
