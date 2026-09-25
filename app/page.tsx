@@ -244,8 +244,7 @@ export default function Home() {
       <div className="noise" aria-hidden="true" />
       <header className="brandbar">
         <button className="brand" onClick={reset} aria-label="Return to Elsewhere home">
-          <span className="brand-mark">◇</span>
-          <span>ELSEWHERE</span>
+          <small>SWITCH PALETTE presents</small><span>ELSEWHERE</span>
         </button>
         {phase !== "home" && (
           <div className="hud">
@@ -257,25 +256,23 @@ export default function Home() {
 
       {phase === "home" && (
         <section className="home">
-          <div className="eyebrow">A SOCIAL ADVENTURE</div>
-          <h1>There are people here you haven&apos;t met yet.</h1>
-          <p className="lead">
-            You won&apos;t find them by swiping. Explore rooms. Make choices. Collect strange things.
-            Leave traces of yourself behind. The paths you take determine whose paths cross yours.
-          </p>
+          <div className="room-kicker">SWITCH PALETTE PRESENTS</div>
+          <h1>ELSEWHERE</h1>
+          <div className="room-tagline">Meet people by going somewhere strange.</div>
+          <p className="lead room-intro">Step through a room. Make choices. Leave traces behind. The paths you take determine whose paths cross yours.</p>
           <label className="namebox">
             <span>WHAT SHOULD WE CALL YOU?</span>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your first name" maxLength={30} />
           </label>
-          <div className="choose-label">I CAME HERE HOPING TO FIND…</div>
-          <div className="intent-grid">
+          <div className="choose-label">CHOOSE A ROOM</div>
+          <div className="intent-grid room-portals">
             {(Object.keys(intents) as Intent[]).map((kind) => {
               const item = intents[kind];
               return (
-                <button className="intent-card" key={kind} onClick={() => start(kind)}>
-                  <span className="intent-mark">{item.mark}</span>
-                  <span className="intent-copy"><b>{item.label}</b><small>{item.intro}</small></span>
-                  <span className="arrow">↗</span>
+                <button className={`intent-card portal portal-${kind}`} key={kind} onClick={() => start(kind)}>
+                  <span className="portal-room" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span className="intent-copy"><b>{kind === "dating" ? "Dating" : kind === "friends" ? "Friends" : kind === "creative" ? "Creative" : "Music"}</b><small>{kind === "dating" ? "Romance, curiosity, and the people in between." : kind === "friends" ? "Kindred weirdos for real life." : kind === "creative" ? "Collaborators, muses, and fellow makers." : "Concert buddies, bandmates, and late-night listeners."}</small></span>
+                  <span className="portal-enter">ENTER →</span>
                 </button>
               );
             })}
