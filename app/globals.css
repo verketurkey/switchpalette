@@ -330,3 +330,29 @@ body, button, input { font-family:"Fraunces", Georgia, serif; }
 .profile-float i:first-child{margin-left:0;background:#9b674d}.profile-float i:nth-child(2){background:#71825d}.profile-float i:nth-child(3){background:#a97952}
 .profile-float em{margin-left:-5px;background:#f1d99e;border:2px solid #5a321e;border-radius:999px;padding:5px 7px;color:#4a281c;font:700 .58rem "DM Mono",monospace;font-style:normal}
 @media (prefers-reduced-motion:reduce){.profile-float{transition:none}}
+
+
+/* Whole-house category map */
+.house-map{position:relative;z-index:6;background:#2f1d17;padding:38px 4% 48px;border-top:8px solid #5a321e;color:#3b2318}
+.house-title{text-align:center;color:#f7e6bb;margin:0 auto 28px;max-width:720px}
+.house-title small{font:700 .7rem "DM Mono",monospace;letter-spacing:.2em}
+.house-title h2{font-family:"Shrikhand","Abril Fatface",serif;font-size:clamp(2.7rem,6vw,5.2rem);margin:.08em 0;color:#f2b84b;line-height:.95}
+.house-title p{font-family:"Fraunces",serif;margin:10px auto 0;line-height:1.5}
+.floor{position:relative;display:grid;gap:10px;margin:0 auto;border:5px solid #5a321e;border-bottom-width:10px;padding:38px 12px 12px;background:#c58a54;box-shadow:inset 0 0 40px rgba(61,29,15,.28);max-width:1120px}
+.floor+.floor{border-top:0}
+.floor-label{position:absolute;left:12px;top:9px;background:#f0d59c;border:2px solid #5a321e;padding:4px 9px;transform:rotate(-1deg);font:700 .62rem "DM Mono",monospace;letter-spacing:.12em}
+.floor-attic{grid-template-columns:1fr 1fr;clip-path:polygon(11% 0,89% 0,100% 100%,0 100%);padding-left:7%;padding-right:7%;background:#a96b46}
+.floor-second{grid-template-columns:1fr 1fr;background:#d29a61}
+.floor-basement{grid-template-columns:repeat(4,1fr);background:#79543d}
+.house-room{position:relative;min-height:210px;border:3px solid #5a321e;padding:76px 18px 16px;text-align:left;cursor:pointer;color:#3d2419;background:linear-gradient(155deg,#e4b871,#c8794d);box-shadow:inset 0 0 0 5px rgba(255,231,176,.18)}
+.house-room:before{content:"";position:absolute;left:14px;top:15px;width:58px;height:48px;border:4px solid #6c3b25;background:linear-gradient(#ef9e64 0 52%,#6e9a72 52%);box-shadow:72px 12px 0 -13px #6c3b25}
+.house-room:after{content:"";position:absolute;right:14px;top:18px;width:42px;height:60px;background:#697a4f;clip-path:polygon(50% 0,65% 30%,100% 15%,75% 48%,100% 55%,67% 62%,75% 100%,25% 100%,33% 62%,0 55%,25% 48%,0 15%,35% 30%)}
+.house-room:hover,.house-room:focus-visible{outline:4px solid #f3d06a;outline-offset:-7px;filter:brightness(1.07)}
+.house-room b{display:block;font:400 1.55rem "Abril Fatface","Fraunces",serif}
+.house-room small{display:block;margin-top:7px;font:.84rem/1.35 "Fraunces",serif}
+.house-room>span{display:block;margin-top:16px;font:700 .57rem "DM Mono",monospace;letter-spacing:.12em}
+.attic-library{background:linear-gradient(155deg,#b77969,#d7a75c)}.bedroom{background:linear-gradient(155deg,#d88d79,#d8ad66)}.hobby-room{background:linear-gradient(155deg,#86a075,#c89657)}
+.rec-room{background:linear-gradient(155deg,#8b567b,#c4774e);color:#fff0c8}.workshop{background:linear-gradient(155deg,#aa784c,#6f6048);color:#fff0c8}.kitchen-cellar{background:linear-gradient(155deg,#c56d4d,#d5a44e)}.garden-door{background:linear-gradient(155deg,#71875b,#a98d4e)}
+.house-room .profile-float{top:-28px}
+@media(max-width:800px){.floor-basement{grid-template-columns:1fr 1fr}.floor-attic{clip-path:none;padding-left:12px;padding-right:12px}}
+@media(max-width:560px){.floor,.floor-attic,.floor-second,.floor-basement{grid-template-columns:1fr}.house-room{min-height:180px}.house-title h2{font-size:2.8rem}}
