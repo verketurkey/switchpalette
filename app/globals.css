@@ -297,3 +297,17 @@ body, button, input { font-family:"Fraunces", Georgia, serif; }
 .home .footer-note{position:relative;color:#f4dfb3!important;text-shadow:1px 1px #4d291b;margin-top:28px}
 @media(max-width:900px){.room-portals{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.home{padding:34px 18px}.room-portals{grid-template-columns:1fr}.portal{min-height:390px!important}.portal-room{height:225px}.room-tagline{width:auto;border-radius:20px}.home h1{font-size:clamp(4rem,22vw,6.5rem)}}
+
+/* Uploaded Elsewhere room artwork */
+.photo-home{position:relative;max-width:1536px;padding:0!important;background:#5b321f!important;border:0!important;border-radius:0;overflow:hidden;box-shadow:0 20px 60px rgba(34,17,8,.45)!important}
+.photo-home:before{display:none!important}
+.elsewhere-room-art{display:block;width:100%;height:auto;position:relative;z-index:1}
+.portal-hotspots{position:absolute;inset:0;z-index:3;pointer-events:none}
+.photo-hotspot{position:absolute;top:32%;height:45%;border:0;background:transparent;color:transparent;cursor:pointer;pointer-events:auto;border-radius:45% 45% 8px 8px}
+.photo-hotspot span,.photo-hotspot small{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.photo-hotspot:hover,.photo-hotspot:focus-visible{outline:5px solid rgba(255,239,190,.85);outline-offset:-6px;background:rgba(255,205,108,.08)}
+.hotspot-dating{left:13.5%;width:16%}.hotspot-friends{left:31.2%;width:16.3%}.hotspot-creative{left:50.2%;width:16.4%}.hotspot-music{left:69.3%;width:16.5%}
+.photo-namebox{position:absolute;z-index:5;left:50%;bottom:2.2%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;padding:7px 12px;background:rgba(247,229,187,.94);border:2px solid #5a321e;box-shadow:3px 3px 0 #5a321e;color:#4a281c;font-family:"DM Mono",monospace;font-size:.65rem;letter-spacing:.08em}
+.photo-namebox input{width:150px;padding:6px 8px;border:1px solid #7c4a2c;background:#fff3d5;color:#3c2419;font-family:"Fraunces",serif}
+.photo-access-note{position:absolute;z-index:4;right:1.2%;bottom:1%;font-family:"DM Mono",monospace;font-size:.55rem;color:#fff0c4;background:rgba(62,31,17,.75);padding:5px 8px}
+@media(max-width:760px){.photo-home{overflow-x:auto}.elsewhere-room-art{width:1000px;max-width:none}.portal-hotspots{width:1000px}.photo-namebox{position:sticky;left:12px;bottom:12px;transform:none;width:max-content;margin-top:-50px}.photo-access-note{display:none}}
