@@ -195,7 +195,8 @@ export default function Home() {
   const [artifacts, setArtifacts] = useState<Artifact[]>([]);
   const [hiddenFound, setHiddenFound] = useState<number[]>([]);
   const [phase, setPhase] = useState<"home" | "world" | "cabinet" | "door" | "person" | "quest">("home");
-  const [sealed, setSealed] = useState(false);\n  const [houseRoom, setHouseRoom] = useState<string | null>(null);
+  const [sealed, setSealed] = useState(false);
+  const [houseRoom, setHouseRoom] = useState<string | null>(null);
 
   const config = intent ? intents[intent] : null;
   const activeScenes = intent ? worlds[intent].scenes : worlds.dating.scenes;
