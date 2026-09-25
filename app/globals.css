@@ -356,3 +356,12 @@ body, button, input { font-family:"Fraunces", Georgia, serif; }
 .house-room .profile-float{top:-28px}
 @media(max-width:800px){.floor-basement{grid-template-columns:1fr 1fr}.floor-attic{clip-path:none;padding-left:12px;padding-right:12px}}
 @media(max-width:560px){.floor,.floor-attic,.floor-second,.floor-basement{grid-template-columns:1fr}.house-room{min-height:180px}.house-title h2{font-size:2.8rem}}
+
+/* Interactive room zoom */
+.room-overlay{position:fixed;inset:0;z-index:100;background:rgba(35,18,11,.78);backdrop-filter:blur(5px);display:grid;place-items:center;padding:24px}
+.room-detail{position:relative;width:min(760px,94vw);min-height:520px;padding:70px 58px 50px;border:7px solid #5a321e;color:#40251a;background:radial-gradient(circle at 75% 20%,rgba(255,211,111,.8),transparent 20%),linear-gradient(145deg,#d98256,#e5bd72 55%,#71865c);box-shadow:18px 18px 0 #2d1912,inset 0 0 0 8px rgba(255,238,192,.22);overflow:hidden}
+.room-detail:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 110px,rgba(80,42,25,.08) 111px 114px)}
+.room-detail small{position:relative;font:700 .7rem "DM Mono",monospace;letter-spacing:.2em}.room-detail h2{position:relative;font:400 clamp(3.5rem,8vw,6.5rem)/.85 "Shrikhand",serif;margin:.12em 0 .25em;color:#7b2448;text-shadow:3px 3px #f2c85e}.room-detail p{position:relative;max-width:560px;font:1.05rem/1.6 "Fraunces",serif}
+.room-close{position:absolute;z-index:2;right:18px;top:14px;width:44px;height:44px;border:3px solid #5a321e;border-radius:50%;background:#f1d79b;color:#4b291c;font-size:1.8rem;cursor:pointer}
+.room-people{position:relative;display:flex;align-items:center;margin:34px 0}.room-people i{width:54px;height:54px;margin-left:-9px;border-radius:50%;border:4px solid #f5e1b2;background:#7c5945;color:#fff0c8;display:grid;place-items:center;font:400 1.2rem "Abril Fatface",serif;font-style:normal}.room-people i:first-child{margin-left:0}.room-people i:nth-child(2){background:#71855c}.room-people i:nth-child(3){background:#a75c61}.room-people i:nth-child(4){background:#5f7181}.room-people span{margin-left:14px;font:.7rem "DM Mono",monospace}
+@media(max-width:560px){.room-detail{padding:58px 25px 35px;min-height:470px}.room-detail h2{font-size:3.4rem}}
